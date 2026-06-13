@@ -1,9 +1,9 @@
 {
-  "version": "1.0.6",
-  "tag": "v1.0.6",
-  "updatedAt": "2026-06-13T14:43:50Z",
+  "version": "1.0.7",
+  "tag": "v1.0.7",
+  "updatedAt": "2026-06-13T15:10:21Z",
   "downloads": {
-    "mac": "https://github.com/leafrainy/YYLocalShareWeb/releases/download/v1.0.6/YYLocalShare-mac.zip",
-    "win": "https://github.com/leafrainy/YYLocalShareWeb/releases/download/v1.0.6/YYLocalShare-win.zip"
+    "mac": "https://github.com/leafrainy/YYLocalShareWeb/releases/download/v1.0.7/YYLocalShare-mac.zip",
+    "win": "https://github.com/leafrainy/YYLocalShareWeb/releases/download/v1.0.7/YYLocalShare-win.zip"
   }
 }
