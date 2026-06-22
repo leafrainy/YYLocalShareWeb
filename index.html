@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="YYLocalShare 叶雨局域网分享工具 — 轻量级局域网文件分享，上传即得链接与二维码，手机扫码即可下载。">
+  <meta name="description" content="YYLocalShare 叶雨局域网分享工具 — 基于 Wails 与 Go 的轻量级桌面工具，拖入文件即可生成局域网分享链接与二维码。">
   <meta name="keywords" content="局域网分享,文件传输,YYLocalShare,叶雨">
   <title>YYLocalShare · 叶雨局域网分享工具</title>
   <style>
@@ -453,10 +453,10 @@
       </div>
       <h1>
         叶雨局域网分享工具
-        <span>YYLocalShare — 上传文件，秒级生成分享链接</span>
+        <span>YYLocalShare — 拖入文件，快速生成分享链接</span>
       </h1>
       <p class="hero-desc">
-        无需云盘、无需注册。在本机启动服务，浏览器上传文件即可获得分享链接与二维码，同一 Wi-Fi 下的手机、电脑扫码或打开链接即可下载。
+        无需云盘、无需注册。在客户端选择或拖入文件，即可生成分享链接与二维码；同一局域网内的手机、电脑扫码或打开链接便能下载。
       </p>
       <div class="hero-actions">
         <a href="#" data-dl="mac" class="btn btn-primary" id="dl-mac-top">
@@ -475,7 +475,7 @@
         </div>
         <div class="stat">
           <div class="stat-value">0</div>
-          <div class="stat-label">第三方运行时依赖</div>
+          <div class="stat-label">文件经公网中转</div>
         </div>
       </div>
     </div>
@@ -491,12 +491,12 @@
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
           <h3>即开即用</h3>
-          <p>打开客户端，一键启动服务。浏览器访问局域网地址即可上传，无需复杂配置。</p>
+          <p>打开客户端，一键启动分享服务。在窗口内选择或拖入文件，无需复杂配置。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔗</div>
           <h3>链接 + 二维码</h3>
-          <p>上传成功自动生成分享链接与二维码，复制发送或扫码打开，手机下载同样方便。</p>
+          <p>文件添加成功后自动生成分享链接与二维码，复制发送或扫码打开，手机接收同样方便。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🛡️</div>
@@ -505,33 +505,33 @@
         </div>
         <div class="feature-card">
           <div class="feature-icon">📦</div>
-          <h3>极致轻量</h3>
-          <p>基于 Neutralino 原生 WebView + Node HTTP 服务，远低于 Electron 方案。</p>
+          <h3>轻量原生</h3>
+          <p>基于 Wails v2 与 Go 构建，使用系统 WebView 和 Go 标准库 HTTP 服务。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🖥️</div>
           <h3>跨平台支持</h3>
-          <p>提供 macOS 与 Windows 安装包，开发模式下亦支持 Node.js 18+ 直接运行。</p>
+          <p>提供 macOS Universal 与 Windows 64 位版本，覆盖常用桌面系统。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🌐</div>
-          <h3>完全离线</h3>
-          <p>客户端与网页资源均内置，不依赖外部 CDN。断网环境下局域网分享照常使用。</p>
+          <h3>历史记录</h3>
+          <p>分享记录保存在本地，可随时复制链接或删除已分享文件，管理更直观。</p>
         </div>
       </div>
 
       <div class="compare">
         <div class="compare-item">
-          <strong>Neutralino</strong>
-          <span>原生 GUI · ~2 MB</span>
+          <strong>Wails v2</strong>
+          <span>系统 WebView 桌面客户端</span>
         </div>
         <div class="compare-item">
-          <strong>Node HTTP</strong>
-          <span>零依赖服务</span>
+          <strong>Go net/http</strong>
+          <span>内置局域网分享服务</span>
         </div>
         <div class="compare-item">
-          <strong>pkg 打包</strong>
-          <span>独立可执行文件</span>
+          <strong>原生前端</strong>
+          <span>HTML · CSS · JavaScript</span>
         </div>
         <div class="compare-item">
           <strong>端口 3000</strong>
@@ -551,12 +551,12 @@
         <div class="step">
           <div class="step-num">1</div>
           <h3>启动服务</h3>
-          <p>打开 YYLocalShare 客户端，点击「启动服务」，复制显示的局域网地址。</p>
+          <p>打开 YYLocalShare 客户端，点击「启动服务」，应用会自动识别局域网地址。</p>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <h3>上传文件</h3>
-          <p>在浏览器中打开地址，拖拽或选择文件上传，获取分享链接与二维码。</p>
+          <p>在客户端内拖拽或选择文件，添加成功后即可获得分享链接与二维码。</p>
         </div>
         <div class="step">
           <div class="step-num">3</div>
